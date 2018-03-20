@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="hellowWeb:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/hellowWeb_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="hellowWeb/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="hellowWeb" />
+        </element>
+      </element>
+      <element id="directory" name="folder">
+        <element id="dir-copy" path="C:/tomcat/apache-tomcat-9.0.6/webapps" />
+      </element>
+    </root>
+  </artifact>
+</component>
