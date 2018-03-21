@@ -19,6 +19,10 @@ public class ServletDemo1 extends HttpServlet {
         String pwd = new String(request.getParameter("pwdP").getBytes("ISO_8859_1"),"UTF-8");
         System.out.println(name + "————————— "+ pwd);
         System.out.println("执行post");
+        
+        
+        
+        
 
         //其他方法
         String p = request.getContextPath();
