@@ -58,7 +58,6 @@ public class ServletDemo1 extends HttpServlet {
         }finally {
             out.close();
         }
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
