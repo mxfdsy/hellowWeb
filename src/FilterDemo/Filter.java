@@ -13,7 +13,7 @@ public class Filter implements javax.servlet.Filter {
         System.out.println("被摧毁");
     }
 
-    
+
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
         //设计模式：责任链模式
         chain.doFilter(req, resp);
