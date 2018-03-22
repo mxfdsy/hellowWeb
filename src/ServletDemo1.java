@@ -65,6 +65,7 @@ public class ServletDemo1 extends HttpServlet {
         String name = request.getParameter("name");
         String pwd = request.getParameter("pwd");
         System.out.println(name + "————————— "+ pwd);
+        System.out.println("模拟版本控制");
 
     }
 }
