@@ -20,10 +20,6 @@ public class ServletDemo1 extends HttpServlet {
         System.out.println(name + "————————— "+ pwd);
         System.out.println("执行post");
         
-        
-        
-        
-        
 
         //其他方法
         String p = request.getContextPath();
