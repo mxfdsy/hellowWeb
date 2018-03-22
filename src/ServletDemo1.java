@@ -27,6 +27,7 @@ public class ServletDemo1 extends HttpServlet {
         String y = request.getRemoteAddr();
         String z = request.getRemoteHost();
 
+
         Map<String, String[]> pMap = request.getParameterMap();
 
         Set<Map.Entry<String, String[]>> set =pMap.entrySet();
