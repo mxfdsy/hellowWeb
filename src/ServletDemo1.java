@@ -14,29 +14,28 @@ import java.util.Set;
 public class ServletDemo1 extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //解码
-        String name = new String(request.getParameter("nameP").getBytes("ISO_8859_1"),"UTF-8");
-
-        String pwd = new String(request.getParameter("pwdP").getBytes("ISO_8859_1"),"UTF-8");
+//        String name = new String(request.getParameter("nameP").getBytes("ISO_8859_1"),"UTF-8");
+//
+//        String pwd = new String(request.getParameter("pwdP").getBytes("ISO_8859_1"),"UTF-8");
+        String name =request.getParameter("nameP");
+        String pwd = request.getParameter("pwdP");
         System.out.println(name + "————————— "+ pwd);
-        System.out.println("执行post");
-
         //其他方法
-        String p = request.getContextPath();
-        String x = request.getRequestURL().toString();
-        String a = request.getRequestURI();
-        String y = request.getRemoteAddr();
-        String z = request.getRemoteHost();
-
-
-        Map<String, String[]> pMap = request.getParameterMap();
-
-        Set<Map.Entry<String, String[]>> set =pMap.entrySet();
-        for (Map.Entry<String, String[]> s:set
-             ) {
-            String key = s.getKey();
-            Object value = s.getValue();
-            System.out.println(key + value);
-        }
+//        String p = request.getContextPath();
+//        String x = request.getRequestURL().toString();
+//        String a = request.getRequestURI();
+//        String y = request.getRemoteAddr();
+//        String z = request.getRemoteHost();
+//
+//        Map<String, String[]> pMap = request.getParameterMap();
+//
+//        Set<Map.Entry<String, String[]>> set =pMap.entrySet();
+//        for (Map.Entry<String, String[]> s:set
+//             ) {
+//            String key = s.getKey();
+//            Object value = s.getValue();
+//            System.out.println(key + value);
+//        }
 //        System.out.println(p);
 //        System.out.println(x);
 //        System.out.println(a);
@@ -44,7 +43,7 @@ public class ServletDemo1 extends HttpServlet {
 //        System.out.println(z);
 
         //response 简单请求的处理
-        response.setContentType("text/html;charset=UTF-8");
+//        response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
             out.println("<html>");
@@ -53,7 +52,7 @@ public class ServletDemo1 extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h2> Hello   " + name + "，欢迎您</h2>");
-            out.println("<h2> “现在是” </h2>" + new Date().toLocaleString());
+            out.println("<h2> 现在是 </h2>" + new Date().toLocaleString());
             out.println("</body>");
             out.println("</html>");
         }finally {
@@ -66,7 +65,5 @@ public class ServletDemo1 extends HttpServlet {
         String name = request.getParameter("name");
         String pwd = request.getParameter("pwd");
         System.out.println(name + "————————— "+ pwd);
-        System.out.println("模拟版本控制");
-
     }
 }

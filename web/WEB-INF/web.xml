@@ -6,10 +6,6 @@
     <filter>
         <filter-name>Filter</filter-name>
         <filter-class>FilterDemo.Filter</filter-class>
-        <init-param>
-            <param-name>Filter</param-name>
-            <param-value>UTF-8</param-value>
-        </init-param>
     </filter>
     <filter-mapping>
         <filter-name>Filter</filter-name>

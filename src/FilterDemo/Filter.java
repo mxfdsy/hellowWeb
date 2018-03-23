@@ -1,26 +1,30 @@
 package FilterDemo;
 
 import javax.servlet.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.security.PrivateKey;
 
 /**
- * Created by 没想法的岁月 on 2018/3/21.
+ * Created by 平凡的世界 on 2018/3/23.
  */
 public class Filter implements javax.servlet.Filter {
-
-    private String Filter = "UTF-8";
+    private String Ecoding ="UTF-8";
     public void destroy() {
-        System.out.println("被摧毁");
+        System.out.println("在销毁");
     }
-
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
-        //设计模式：责任链模式
+
+        HttpServletRequest request = (HttpServletRequest)req;
+        HttpServletResponse response =(HttpServletResponse)resp;
+        request.setCharacterEncoding(Ecoding);
+        response.setContentType("text/html;charset="+ Ecoding);
         chain.doFilter(req, resp);
     }
-    //初始化
+
     public void init(FilterConfig config) throws ServletException {
-        config.getInitParameter("Filter");
         System.out.println("初始化");
     }
 
