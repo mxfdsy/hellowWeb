@@ -11,6 +11,16 @@
         <filter-name>Filter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+    <listener>
+        <listener-class>MyListener</listener-class>
+    </listener>
+    <session-config>
+        <session-timeout>2</session-timeout>
+    </session-config>
+    <context-param>
+        <param-name>namespace</param-name>
+        <param-value>mxfdsy</param-value>
+    </context-param>
     <servlet>
         <servlet-name>ServletDemo1</servlet-name>
         <servlet-class>ServletDemo1</servlet-class>

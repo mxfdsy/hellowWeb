@@ -19,7 +19,10 @@ public class ServletDemo1 extends HttpServlet {
 //        String pwd = new String(request.getParameter("pwdP").getBytes("ISO_8859_1"),"UTF-8");
         String name =request.getParameter("nameP");
         String pwd = request.getParameter("pwdP");
+//        String sessionValue = (String)request.getSession().getAttribute("xxx");
+//        System.out.println(sessionValue);
         System.out.println(name + "————————— "+ pwd);
+        System.out.println(request.getServletContext().getAttribute("val"));
         //其他方法
 //        String p = request.getContextPath();
 //        String x = request.getRequestURL().toString();
