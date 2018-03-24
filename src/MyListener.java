@@ -16,13 +16,13 @@ public class MyListener implements ServletContextListener{
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         String x = servletContextEvent.getServletContext().getInitParameter("namespace");
         servletContextEvent.getServletContext().setAttribute("val","vvvv");
-        System.out.println("容器初始了"+x);
+        System.out.println("Lisenter-容器初始了"+x);
     }
 
     @Override
     public void contextDestroyed(ServletContextEvent servletContextEvent) {
 
-        System.out.println("容器摧毁了");
+        System.out.println("Lisenter-容器摧毁了");
     }
 //    @Override
 //    public void sessionCreated(HttpSessionEvent httpSessionEvent) {

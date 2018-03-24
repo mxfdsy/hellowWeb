@@ -1,4 +1,5 @@
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,6 +23,18 @@ public class ServletDemo1 extends HttpServlet {
 //        String sessionValue = (String)request.getSession().getAttribute("xxx");
 //        System.out.println(sessionValue);
         System.out.println(name + "————————— "+ pwd);
+        //cookies
+        Cookie cookie = new Cookie("CooklesName",name);
+        cookie.setMaxAge(60*60*24);
+        response.addCookie(cookie);
+        System.out.println(request.getSession().getId());
+        //获取请求中的cookes数据
+//        Cookie[] cookies = request.getCookies();
+//        for (int i = 0; i <cookies.length ; i++) {
+//            System.out.println(cookies[i].getName());
+//            System.out.println(cookies[i].getValue());
+//        }
+        //演示监听器
         System.out.println(request.getServletContext().getAttribute("val"));
         //其他方法
 //        String p = request.getContextPath();

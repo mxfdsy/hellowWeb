@@ -12,7 +12,7 @@ import java.security.PrivateKey;
 public class Filter implements javax.servlet.Filter {
     private String Ecoding ="UTF-8";
     public void destroy() {
-        System.out.println("在销毁");
+        System.out.println("Filter-在销毁");
     }
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
@@ -25,7 +25,7 @@ public class Filter implements javax.servlet.Filter {
     }
 
     public void init(FilterConfig config) throws ServletException {
-        System.out.println("初始化");
+        System.out.println("Filter-初始化");
     }
 
 }
