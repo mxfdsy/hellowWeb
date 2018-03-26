@@ -1,3 +1,5 @@
+import FilterDemo.User;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -22,6 +24,8 @@ public class ServletDemo1 extends HttpServlet {
         String pwd = request.getParameter("pwdP");
         //把请求传到JSP文件
         request.setAttribute("name",name);
+        User u = new User("没想法的岁月",17);
+        request.setAttribute("User",u);
         request.getRequestDispatcher("/WEB-INF/HellowJsp.jsp").forward(request,response);
 //        String sessionValue = (String)request.getSession().getAttribute("xxx");
 //        System.out.println(sessionValue);

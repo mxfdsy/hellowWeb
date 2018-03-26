@@ -12,5 +12,7 @@
 </head>
 <body>
     ${name}
+    ${User.name}
+    ${User.age}
 </body>
 </html>
